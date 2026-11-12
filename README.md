@@ -4,7 +4,7 @@ This repository contains the code and measured results behind the experiments in
 
 Everything runs on one machine. The "secret" is a planted fake value (a canary), and no real system, credential or third party is involved.
 
-> The code was developed with the help of an AI assistant (Claude, by Anthropic). The experimental design, the runs and the analysis are reported in the thesis.
+> The code was developed with the help of an AI assistant (Claude, by Anthropic). The experimental design, the runs and the analysis are reported in the paper.
 
 ## What the testbed contains
 
@@ -16,7 +16,7 @@ Everything runs on one machine. The "secret" is a planted fake value (a canary),
 | `agent.py` | The agent: retrieval, then a ReAct loop of up to 4 SQL tool calls, then a final answer. Contains the defence switches and the detectors, and logs every run. |
 | `check_tool.py` | Sanity check that the model uses the `TOOL:` format correctly. Not part of the measurements. |
 | `experiment*.py` | The experiments (see below). Each runs 500 times and writes one CSV per condition. |
-| `results/` | The CSV files behind every rate reported in the thesis. |
+| `results/` | The CSV files behind every rate reported in the paper. |
 
 ## Requirements
 
@@ -85,7 +85,7 @@ Notes:
 | Integrity DELETE: baseline / output filter / human approval / read-only | 14 / 8 / 9 / 7 | 12 / 8 / 0 / 0 writes |
 | Integrity UPDATE (subtle): baseline | 4 | 4 writes |
 
-The thesis reports each rate with a Wilson 95% confidence interval. `experiment.py` contains the `wilson()` function used to compute them.
+The paper reports each rate with a Wilson 95% confidence interval. `experiment.py` contains the `wilson()` function used to compute them.
 
 ## Reproducibility
 
