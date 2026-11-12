@@ -1,6 +1,6 @@
 # Prompt-Injection Attack Graph: Experimental Testbed
 
-This repository contains the code and measured results behind the experiments in my thesis. It is a small, fully local testbed: an LLM agent that answers staff questions using retrieved documents and a SQL database tool. Prompt-injection attacks are run against it hundreds of times to measure the probability of each edge in an attack graph, and to test how simple defences change those probabilities.
+This repository contains the code and measured results behind the experiments in my paper. It is a small, fully local testbed: an LLM agent that answers staff questions using retrieved documents and a SQL database tool. Prompt-injection attacks are run against it hundreds of times to measure the probability of each edge in an attack graph, and to test how simple defences change those probabilities.
 
 Everything runs on one machine. The "secret" is a planted fake value (a canary), and no real system, credential or third party is involved.
 
